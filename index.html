@@ -3,173 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aadhaar in India: Expanding Reach and Digital Inclusion</title>
+    <title>The Shift from Theatres to Streaming Platforms</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
-        .gradient-bg { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); }
-        .card { background: white; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: #f8fafc; overflow-x: hidden; }
+        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .text-gradient-red { background: linear-gradient(to right, #ef4444, #991b1b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .stat-card { transition: all 0.4s ease; }
+        .stat-card:hover { border-color: #ef4444; transform: translateY(-5px); }
+        #waterfallChart { width: 100%; height: 350px; }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #ef4444; border-radius: 10px; }
     </style>
 </head>
-<body class="text-slate-800">
+<body class="pb-20">
 
-    <header class="gradient-bg text-white py-16 px-6 shadow-lg">
-        <div class="max-w-6xl mx-auto">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Aadhaar in India</h1>
-            <p class="text-xl opacity-90 leading-relaxed max-w-3xl">Expanding Reach and Digital Inclusion: A Data Story on the Scale and Impact of the World's Largest Biometric ID System.</p>
+    <header class="relative h-[70vh] flex items-center justify-center text-center px-6 border-b border-white/5">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-10"></div>
+        <div class="relative z-10 max-w-5xl">
+            <span class="inline-block px-4 py-1 mb-6 text-xs font-bold tracking-[0.3em] uppercase border border-red-500/40 rounded-full text-red-500 bg-red-500/5">Data Story 4</span>
+            <h1 class="text-6xl md:text-8xl font-extrabold mb-6 tracking-tighter">The Shift to <br><span class="text-gradient-red italic">Streaming</span></h1>
+            <p class="text-slate-400 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
+                Exploring how convenience is replacing the traditional idea of going to theatres for entertainment in 2025.
+            </p>
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 -mt-10 mb-20">
+    <main class="max-w-7xl mx-auto px-6 -mt-24 relative z-20">
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div class="card p-6 border-t-4 border-blue-500">
-                <p class="text-sm text-slate-500 uppercase font-semibold">Total Issued</p>
-                <h2 class="text-3xl font-bold text-blue-700">1.41 Billion+</h2>
-                <p class="text-sm mt-2 text-slate-600">~94.7% Population Coverage</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            <div class="glass p-6 rounded-3xl stat-card border-t-2 border-red-500">
+                <p class="text-xs font-bold text-slate-500 uppercase tracking-widest">Home Preference</p>
+                <h2 class="text-4xl font-black mt-2">46%</h2>
+                <p class="text-xs text-slate-400 mt-1">Prefer home vs 15% Theatre</p>
             </div>
-            <div class="card p-6 border-t-4 border-green-500">
-                <p class="text-sm text-slate-500 uppercase font-semibold">Fiscal Savings</p>
-                <h2 class="text-3xl font-bold text-green-700">₹3.72 Lakh Cr</h2>
-                <p class="text-sm mt-2 text-slate-600">Through DBT Efficiency</p>
+            <div class="glass p-6 rounded-3xl stat-card">
+                <p class="text-xs font-bold text-slate-500 uppercase tracking-widest">Content Spend</p>
+                <h2 class="text-4xl font-black mt-2 text-red-500">$18B</h2>
+                <p class="text-xs text-slate-400 mt-1">Netflix Investment (2022)</p>
             </div>
-            <div class="card p-6 border-t-4 border-purple-500">
-                <p class="text-sm text-slate-500 uppercase font-semibold">Daily Authentications</p>
-                <h2 class="text-3xl font-bold text-purple-700">9 Crore+</h2>
-                <p class="text-sm mt-2 text-slate-600">Powering daily life services</p>
+            <div class="glass p-6 rounded-3xl stat-card">
+                <p class="text-xs font-bold text-slate-500 uppercase tracking-widest">Market Deal</p>
+                <h2 class="text-4xl font-black mt-2">$82.7B</h2>
+                <p class="text-xs text-slate-400 mt-1">Warner Bros Acquisition</p>
+            </div>
+            <div class="glass p-6 rounded-3xl stat-card">
+                <p class="text-xs font-bold text-slate-500 uppercase tracking-widest">Retention Rate</p>
+                <h2 class="text-4xl font-black mt-2">98%</h2>
+                <p class="text-xs text-slate-400 mt-1">Netflix Lead Loyalty</p>
             </div>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
             
-            <div class="space-y-6 text-lg leading-relaxed text-slate-700">
-                <div class="card p-8">
-                    <h3 class="text-2xl font-bold mb-4 text-slate-900">The Data Story</h3>
-                    <p>The scale of Aadhaar in India is massive. By March 2025, the Unique Identification Authority of India had issued more than <strong>1.41 billion Aadhaar numbers</strong>, reaching about <strong>94.7% of the population</strong>. In most states and union territories, coverage is above 90%, showing how widely Aadhaar has spread across the country.</p>
-                    <p class="mt-4">This wide coverage has helped build the <strong>JAM system</strong>—Jan Dhan, Aadhaar, and Mobile—which connects identity with banking and mobile access. Because of this, bank account ownership in India increased from <strong>17% in 2009 to 77% in 2024</strong>. Today, around <strong>86.8 crore Aadhaar numbers</strong> are linked to bank accounts, making it easier for people to receive money directly.</p>
-                    <p class="mt-4">Aadhaar has also changed how welfare schemes work. Through Direct Benefit Transfer (DBT), the government has been able to remove around <strong>100 million fake beneficiaries</strong>, saving <strong>₹3.72 lakh crore</strong> by March 2025.</p>
-                </div>
+            <div class="lg:col-span-5 space-y-6">
+                <div class="glass p-8 rounded-[2.5rem] h-full shadow-2xl">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                        <span class="w-1.5 h-8 bg-red-600 rounded-full"></span> The Living Room Revolution
+                    </h3>
+                    <div class="space-y-5 text-slate-300 leading-relaxed overflow-y-auto max-h-[500px] pr-4 custom-scrollbar">
+                        <p>The entertainment industry is going through a massive transformation. While cinemas saw a comeback in 2025, the deeper shift is digital. What started as a pandemic necessity is now a permanent lifestyle choice. Convenience is slowly replacing the traditional "night out" at the cinema.</p>
+                        
+                        <p>Dominant platforms like <strong>Netflix India, Amazon Prime Video, and Disney+ Hotstar</strong> have shifted the audience's gaze from multiplexes to personal screens. Today, 46% of people choose streaming, leaving only 15% loyal to the theatrical experience.</p>
+                        
+                        <p>This is driven by practicality: <strong>78% prioritize convenience</strong>, while 70% avoid crowded spaces. Financially, the gap is widening. Global home entertainment spending skyrocketed from $15.8 billion in 2014 to $42.6 billion in 2018, showing a clear preference for subscriptions over ticket booths.</p>
 
-                <div class="card p-8 bg-blue-50 border-l-4 border-blue-600">
-                    <h3 class="text-xl font-bold mb-2">Modern Solutions</h3>
-                    <p class="text-base italic">"To address connectivity issues, UIDAI has introduced AI-based Face Authentication, which has already crossed 1.3 billion transactions. For people without smartphones, Aadhaar Enabled Payment System (AePS) bridges the digital gap."</p>
+                        <div class="bg-slate-900/50 p-5 rounded-2xl border border-white/5">
+                            <h4 class="text-red-500 font-bold text-sm mb-2 uppercase">Industry Turning Point</h4>
+                            <p class="text-xs italic">In December 2025, Netflix's $82.7 billion deal to acquire Warner Bros confirmed that digital platforms now hold the reins of traditional Hollywood legacy.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="space-y-8">
-                <div class="card p-6">
-                    <h3 class="text-xl font-bold mb-4 text-center">Impact of Aadhaar Efficiency</h3>
-                    <div id="waterfallChart" style="height: 400px;"></div>
-                    <p class="text-xs text-slate-500 mt-2 text-center">Visualizing the removal of 100M fake beneficiaries and fiscal savings.</p>
-                </div>
-
-                <div class="card p-6">
-                    <h3 class="text-xl font-bold mb-4 text-center">Financial Inclusion Jump (2009 - 2024)</h3>
-                    <canvas id="bankChart" height="200"></canvas>
+            <div class="lg:col-span-7">
+                <div class="glass p-8 rounded-[2.5rem] h-full shadow-2xl">
+                    <div class="flex flex-col mb-8">
+                        <h3 class="text-2xl font-bold">The Closing Theatrical Window</h3>
+                        <p class="text-slate-500 text-sm">Visualizing the reduction in exclusive cinema release days.</p>
+                    </div>
+                    <div id="waterfallChart"></div>
+                    <p class="text-center text-xs text-slate-500 mt-4 italic">Source: Industry Analysis (2012-2017 Comparisons)</p>
                 </div>
             </div>
         </div>
 
-        <section class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="card p-8">
-                <h3 class="text-2xl font-bold mb-4">Regional Observations</h3>
-                <div class="space-y-4">
-                    <div class="flex justify-between items-center">
-                        <span class="font-medium text-slate-600">National Average Coverage</span>
-                        <span class="font-bold text-blue-600">94.7%</span>
-                    </div>
-                    <div class="w-full bg-slate-200 rounded-full h-2">
-                        <div class="bg-blue-600 h-2 rounded-full" style="width: 94.7%"></div>
-                    </div>
-                    
-                    <div class="flex justify-between items-center mt-6">
-                        <span class="font-medium text-slate-600">Meghalaya</span>
-                        <span class="font-bold text-orange-500">79.17%</span>
-                    </div>
-                    <div class="w-full bg-slate-200 rounded-full h-2">
-                        <div class="bg-orange-500 h-2 rounded-full" style="width: 79.17%"></div>
-                    </div>
-
-                    <div class="flex justify-between items-center mt-6">
-                        <span class="font-medium text-slate-600">Nagaland</span>
-                        <span class="font-bold text-red-500">61.85%</span>
-                    </div>
-                    <div class="w-full bg-slate-200 rounded-full h-2">
-                        <div class="bg-red-500 h-2 rounded-full" style="width: 61.85%"></div>
-                    </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            
+            <div class="glass p-8 rounded-[2rem] stat-card">
+                <h3 class="text-lg font-bold mb-8">Viewer Motivations</h3>
+                <div class="h-[250px] relative">
+                    <canvas id="radarChart"></canvas>
                 </div>
-                <p class="mt-6 text-sm text-slate-500 italic">Challenges remain in the Northeast and rural areas (e.g., Jharkhand) where fingerprint failure rates have reached 20% due to manual labour and weak connectivity.</p>
             </div>
 
-            <div class="card p-8">
-                <h3 class="text-2xl font-bold mb-4">Key Observations</h3>
-                <ul class="space-y-3 list-disc list-inside text-slate-700">
-                    <li><strong>1.41 Billion+</strong> Aadhaar numbers generated.</li>
-                    <li>Bank ownership spiked from <strong>17% to 77%</strong>.</li>
-                    <li><strong>86.8 Crore</strong> Aadhaar numbers linked to banks.</li>
-                    <li><strong>₹3.72 Lakh Crore</strong> saved by March 2025.</li>
-                    <li><strong>1.3 Billion</strong> Face Authentication transactions completed.</li>
-                    <li>Daily system load: <strong>9 Crore+</strong> authentications.</li>
-                </ul>
+            <div class="glass p-8 rounded-[2rem] stat-card">
+                <h3 class="text-lg font-bold mb-8">Home Entertainment Spend</h3>
+                <div class="h-[250px] relative">
+                    <canvas id="areaChart"></canvas>
+                </div>
+                <div class="flex justify-between mt-4">
+                    <span class="text-[10px] font-bold text-slate-500 tracking-tighter">2014: $15.8B</span>
+                    <span class="text-[10px] font-bold text-red-500 tracking-tighter">2018: $42.6B</span>
+                </div>
             </div>
-        </section>
+
+            <div class="glass p-8 rounded-[2rem] stat-card bg-slate-900/40">
+                <h3 class="text-lg font-bold mb-6 text-red-500 uppercase tracking-widest">Cinema Distress</h3>
+                <div class="space-y-6">
+                    <div class="flex items-center justify-between p-4 bg-black/40 rounded-2xl">
+                        <span class="text-sm">PVR INOX Shares</span>
+                        <span class="text-red-500 font-black text-xl">-6.3%</span>
+                    </div>
+                    <div class="p-4 border border-white/5 rounded-2xl">
+                        <p class="text-xs text-slate-400 leading-relaxed">In India, share prices plummeted after the OTT waiting period was slashed from <strong>8 weeks to just 4 weeks</strong> for new releases.</p>
+                    </div>
+                    <ul class="text-[11px] text-slate-500 space-y-2 uppercase font-bold">
+                        <li class="flex justify-between"><span>US Streaming Usage</span> <span class="text-white">99%</span></li>
+                        <li class="flex justify-between"><span>Netflix Content ROI</span> <span class="text-white">$18B</span></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
 
     </main>
 
-    <footer class="bg-slate-900 text-white py-10 px-6 text-center">
-        <p class="text-sm opacity-60">Data Story 4: Aadhaar Impact Analysis - Prepared for Digital Inclusion Briefing (2025)</p>
+    <footer class="py-12 border-t border-white/5 text-center text-slate-600">
+        <p class="text-xs tracking-[0.4em] font-bold uppercase mb-2">Shift from Theatres to Streaming Platforms</p>
+        <p class="text-[10px]">Data-driven analysis of global and local entertainment trends © 2026</p>
     </footer>
 
     <script>
-        // 1. Plotly Waterfall Chart
+        // --- 1. WATERFALL CHART (Theatrical Window) ---
         const waterfallData = [{
             type: "waterfall",
             orientation: "v",
             measure: ["absolute", "relative", "total"],
-            x: ["Historical Baseline", "Fake Beneficiaries Removed", "Fiscal Savings Reach"],
+            x: ["2012 Baseline", "Industry Shift", "2017 Era"],
+            text: ["112 Days", "-27 Days", "85 Days"],
+            y: [112, -27, 85],
             textposition: "outside",
-            text: ["Impact Start", "100 Million", "₹3.72L Cr"],
-            y: [1, -0.4, 3.72], // Abstracted relative scale to show the impact flow
-            connector: { line: { color: "rgb(63, 63, 63)" } },
+            connector: { line: { color: "rgba(255, 255, 255, 0.1)", width: 1, dash: "dot" } },
             increasing: { marker: { color: "#10b981" } },
             decreasing: { marker: { color: "#ef4444" } },
             totals: { marker: { color: "#3b82f6" } }
         }];
 
-        const waterfallLayout = {
-            title: { text: "Efficiency Gain Breakdown" },
-            autosize: true,
-            margin: { l: 50, r: 50, t: 80, b: 50 },
-            showlegend: false
+        const layout = {
+            paper_bgcolor: 'rgba(0,0,0,0)',
+            plot_bgcolor: 'rgba(0,0,0,0)',
+            font: { family: 'Plus Jakarta Sans', color: '#64748b', size: 10 },
+            margin: { t: 20, b: 20, l: 40, r: 20 },
+            showlegend: false,
+            yaxis: { gridcolor: '#1e293b', zerolinecolor: '#1e293b' }
         };
 
-        Plotly.newPlot('waterfallChart', waterfallData, waterfallLayout);
+        Plotly.newPlot('waterfallChart', waterfallData, layout, {displayModeBar: false});
 
-        // 2. Chart.js Bar Chart for Bank Ownership
-        const ctx = document.getElementById('bankChart').getContext('2d');
-        new Chart(ctx, {
-            type: 'bar',
+        // --- 2. RADAR CHART (Motivations) ---
+        new Chart(document.getElementById('radarChart'), {
+            type: 'radar',
             data: {
-                labels: ['2009 (Pre-Aadhaar)', '2024 (JAM Era)'],
+                labels: ['Convenience', 'Avoid Crowds', 'Cost Savings'],
                 datasets: [{
-                    label: 'Bank Account Ownership (%)',
-                    data: [17, 77],
-                    backgroundColor: ['#94a3b8', '#3b82f6'],
-                    borderRadius: 8
+                    label: 'Audience Priority %',
+                    data: [78, 70, 62],
+                    backgroundColor: 'rgba(239, 68, 68, 0.2)',
+                    borderColor: '#ef4444',
+                    borderWidth: 2,
+                    pointBackgroundColor: '#fff',
+                    pointBorderColor: '#ef4444'
                 }]
             },
             options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
                 scales: {
-                    y: { beginAtZero: true, max: 100 }
-                },
-                plugins: {
-                    legend: { display: false }
+                    r: {
+                        grid: { color: '#1e293b' },
+                        angleLines: { color: '#1e293b' },
+                        pointLabels: { color: '#94a3b8', font: { size: 10 } },
+                        ticks: { display: false, stepSize: 20 }
+                    }
                 }
             }
         });
+
+        // --- 3. AREA CHART (Spending Growth) ---
+        new Chart(document.getElementById('areaChart'), {
+            type: 'line',
+            data: {
+                labels: ['2014', '2015', '2016', '2017', '2018'],
+                datasets: [{
+                    label: 'Spending ($ Billions)',
+                    data: [15.8, 22.5, 29.2, 35.9, 42.6], // Trend line based on 2014 and 2018 markers
+                    fill: true,
+                    backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                    borderColor: '#ef4444',
+                    tension: 0.4,
+                    pointRadius: (ctx) => (ctx.dataIndex === 0 || ctx.dataIndex === 4) ? 6 : 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { display: false },
+                    y: { display: false }
+                }
+            }
+        });
+
+        window.onresize = () => Plotly.Plots.resize('waterfallChart');
     </script>
 </body>
 </html>
